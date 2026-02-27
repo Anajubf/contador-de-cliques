@@ -3,7 +3,6 @@ import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 
 export default function App() {
   const [contador, setContador] = useState(0);
-
   const incrementar = () => { setContador(contador + 1); }
   const decrementar = () => { setContador(contador - 1); }
   const reset = () => { setContador(0); }
@@ -12,16 +11,13 @@ export default function App() {
 <View style={styles.container}>
     <Text style={styles.titulo}>Contador Digital</Text>
     <Text style={styles.numero}>{contador} </Text>
-
     <View style={styles.linhaDeBotoes}>
         <TouchableOpacity style={styles.botaoMais} onPress={decrementar}>
             <Text style={styles.textoBotao}>-</Text>
         </TouchableOpacity>
-
         <TouchableOpacity style={styles.botaoMenos} onPress={incrementar}>
              <Text style={styles.textoBotao}>+</Text>
         </TouchableOpacity>
-
         <TouchableOpacity style={styles.botaoReset} onPress={reset}>
              <Text style={styles.textoBotao}>reset</Text>
         </TouchableOpacity>
